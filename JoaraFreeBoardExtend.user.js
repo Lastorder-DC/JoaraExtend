@@ -151,7 +151,7 @@ else
 {
 	$("<a class='common_btn'><span>\uc54c\ub9bc</span></a>") .appendTo($(".btnL")) .bind("click", function()
 	{
-		if(document.location.href.indexOf("book_code")) NovelBookmarkAdd(document.location.href.split("book_code=")[1].split("&")[0]);
+		if(document.location.href.indexOf("book_code") != -1) NovelBookmarkAdd(document.location.href.split("book_code=")[1].split("&")[0]);
 		else BoardBookmarkAdd(document.location.href.split("idx=")[1].split("&")[0]);
 	});
 }
