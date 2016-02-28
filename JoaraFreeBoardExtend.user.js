@@ -11,7 +11,7 @@
 // ==/UserScript==
 
 'use strict';
-var Version = 1;
+var Version = 2;
 
 function StorageGet(Name)
 {
