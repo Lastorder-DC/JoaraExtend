@@ -117,7 +117,7 @@ function CheckNovelComment()
 var Mobile = "mw.joara.com" == document.location.host ? 1 : 0;
 var WWW = "www.joara.com" == document.location.host ? "www." : "";
 var Fburl = Mobile ? "http://mw.joara.com/#/board/free/detail/" : "free_board_view.html?idx=";
-var Fburl = "http://www.joara.com/modules/json/comment_book.php?mode=show&book_code=";
+var Nvurl = "http://www.joara.com/literature/view/book_view.html?book_code=";
 
 CheckBoardComment();
 CheckNovelComment();
