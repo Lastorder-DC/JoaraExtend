@@ -117,8 +117,8 @@ function CheckNovelComment()
 
 var Mobile = "mw.joara.com" == document.location.host ? 1 : 0;
 var WWW = "www.joara.com" == document.location.host ? "www." : "";
-var Fburl = Mobile ? "http://mw.joara.com/#/board/free/detail/" : "free_board_view.html?idx=";
-var Nvurl = "http://www.joara.com/literature/view/book_view.html?book_code=";
+var Fburl = Mobile ? "http://mw.joara.com/#/board/free/detail/" : "http://www.joara.com/board/free_board_view.html?idx=";
+var Nvurl = "http://www.joara.com/literature/view/book_comment.html?book_code=";
 
 CheckBoardComment();
 CheckNovelComment();
@@ -162,7 +162,7 @@ else
 
 
 
-$.get("https://github.com/kimtaeyoon49/JoaraExtend/raw/master/Version.txt", function(Data)
+$.get("https://rawgit.com/kimtaeyoon49/JoaraExtend/master/Version.txt", function(Data)
 {
 	if(Version < Data)
 	{
