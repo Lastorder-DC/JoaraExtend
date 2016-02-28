@@ -11,6 +11,7 @@
 // ==/UserScript==
 
 'use strict';
+var Version = 1;
 
 function StorageGet(Name)
 {
@@ -123,6 +124,7 @@ CheckBoardComment();
 CheckNovelComment();
 setInterval(CheckBoardComment, 30000);
 setInterval(CheckNovelComment, 60000);
+StorageSet("JoaraExtendVersion", Version);
 
 if(!StorageGet("BoardBookmarkList")) StorageSet("BoardBookmarkList", []);
 if(!StorageGet("BoardBookmarkComment")) StorageSet("BoardBookmarkComment", {});
@@ -153,5 +155,18 @@ else
 	{
 		if(document.location.href.indexOf("book_code") != -1) NovelBookmarkAdd(document.location.href.split("book_code=")[1].split("&")[0]);
 		else BoardBookmarkAdd(document.location.href.split("idx=")[1].split("&")[0]);
+		
+		alert("이 글이 알림 설정되었습니다.");
 	});
 }
+
+
+
+$.get("https://github.com/kimtaeyoon49/JoaraExtend/raw/master/Version.txt", function(Data)
+{
+	if(Version < Data)
+	{
+		if(confirm("조아라 확장기능의 업데이트가 있습니다. 업데이트하시겠습니까?"))
+			window.open("https://github.com/kimtaeyoon49/JoaraExtend/raw/master/JoaraFreeBoardExtend.user.js", "_blank").focus();
+	}
+});
