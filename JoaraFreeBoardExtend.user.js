@@ -12,7 +12,7 @@
 
 'use strict';
 
-var Version = 3;
+var Version = 4;
 
 if(StorageGet("JoaraExtendVersion") < Version) StorageSet("JoaraExtendVersion", Version);
 
