@@ -11,7 +11,10 @@
 // ==/UserScript==
 
 'use strict';
-var Version = 2;
+
+var Version = 3;
+
+if(StorageGet("JoaraExtendVersion") < Version) StorageSet("JoaraExtendVersion", Version);
 
 function StorageGet(Name)
 {
@@ -164,9 +167,11 @@ else
 
 $.get("https://rawgit.com/kimtaeyoon49/JoaraExtend/master/Version.txt", function(Data)
 {
-	if(Version < Data)
+	if(StorageGet("JoaraExtendVersion") < Data)
 	{
 		if(confirm("조아라 확장기능의 업데이트가 있습니다. 업데이트하시겠습니까?"))
 			window.open("https://github.com/kimtaeyoon49/JoaraExtend/raw/master/JoaraFreeBoardExtend.user.js", "_blank").focus();
+		
+		else StorageSet("JoaraExtendVersion", Data);
 	}
 });
