@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Joara Extend
 // @namespace    http://joara.com/
-// @Ver      0.7
+// @version      0.7
 // @description  조아라 확장기능. 현재 [자유게시판 댓글 알림], [소설 댓글 알림], [소설 임시 저장], [마나 자동 회수] 등의 기능들이 있음.
 // @author       Cenor
 // @match        http://joara.com/*
@@ -213,7 +213,7 @@ else
 
 
 
-$.get("https://rawgit.com/kimtaeyoon49/JoaraExtend/master/Ver.txt", function(Data)
+$.get("https://github.com/kimtaeyoon49/JoaraExtend/raw/master/Ver.txt", function(Data)
 {
 	if(parseInt(s.g("JoaraExtendVer")) < Data)
 	{
@@ -224,5 +224,5 @@ $.get("https://rawgit.com/kimtaeyoon49/JoaraExtend/master/Ver.txt", function(Dat
 	}
 });
 
-$.get("http://" + WWW + "joara.com/modules/json/mana_check.php?mode=mana");
+$.get("http://www.joara.com/modules/json/mana_check.php?mode=mana");
 
