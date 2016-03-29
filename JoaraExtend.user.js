@@ -224,5 +224,5 @@ $.get("https://rawgit.com/kimtaeyoon49/JoaraExtend/master/Ver.txt", function(Dat
 	}
 });
 
-$.get("http://www.joara.com/modules/json/mana_check.php?mode=mana");
+$.get("http://" + WWW + "joara.com/modules/json/mana_check.php?mode=mana");
 
