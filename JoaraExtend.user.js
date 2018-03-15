@@ -6,7 +6,7 @@
 // @author       Cenor
 // @match        http://joara.com/*
 // @match        http://www.joara.com/*
-// @match        http://mw.joara.com/*
+// @match        http://m.joara.com/*
 // @grant        none
 // ==/UserScript==
 
@@ -15,7 +15,7 @@
 var Ver = 7;
 var t;
 var dlh = document.location.href;
-var Mobile = "mw.joara.com" == document.location.host ? 1 : 0;
+var Mobile = "m.joara.com" == document.location.host ? 1 : 0;
 var WWW = "www.joara.com" == document.location.host ? "www." : "";
 var Fburl = Mobile ? "http://mw.joara.com/#/board/free/detail/" : "http://www.joara.com/board/free_board_view.html?idx=";
 var Nvurl = "http://www.joara.com/literature/view/book_comment.html?book_code=";
@@ -24,7 +24,7 @@ var u =
 {
 	b : 
 	{
-		b : "http://mw.joara.com/api/v1/board_comment/list?sub_type=free&cur_page=1&PageSize=100&idx=",
+		b : "http://m.joara.com/api/v1/board_comment/list?sub_type=free&cur_page=1&PageSize=100&idx=",
 		n : "http://" + WWW + "joara.com/modules/json/comment_book.php?mode=show&page=%2Fliterature%2Fview%2Fbook_comment.html&page_size=10&book_code="
 	},
 	
